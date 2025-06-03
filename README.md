@@ -1,4 +1,4 @@
-# xD---Expected-Dribbling
+# xD - Expected-Dribbling
 A probabilistic model to evaluate dribbling success in football/soccer using event and tracking data.
 Modelo probabilístico para evaluar el éxito de regates en fútbol.
 
@@ -20,3 +20,12 @@ Works with standard football event data formats (Opta, StatsBomb, etc.)
 Designed to incorporate additional features like tracking data
 - Performance Metrics / Métricas de Rendimiento: 
 Evaluate both offensive (xD)
+
+# Model Components
+The xD model evaluates three main components:
+
+Attack Component (A): Field position, velocity, teammate support, movement direction
+Defense Component (D): Defensive pressure, coverage, physical mismatch
+Context Component (X): Match time, score differential
+
+Final calculation: xD = A × (1 - D) × X
